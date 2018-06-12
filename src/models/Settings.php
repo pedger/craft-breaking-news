@@ -40,7 +40,7 @@ class Settings extends Model
      * @var string
      */
 	public $someAttribute = 'Some Default Field';
-	public $anotherAttribute = 'Another Default Field';
+	public $anotherAttribute = '2010-01-01';
 
     // Public Methods
     // =========================================================================
