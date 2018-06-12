@@ -1,22 +1,22 @@
 <?php
 /**
- * Craft Breaking News plugin for Craft CMS 3.x
+ * craft-breaking-news plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
- * @link      pedrops.com
+ * @link      http://pedrops.com
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
 namespace pedrops\craftbreakingnews\models;
 
-use pedrops\craftbreakingnews\CraftBreakingNews;
+use pedrops\craftbreakingnews\Craftbreakingnews;
 
 use Craft;
 use craft\base\Model;
 
 /**
- * CraftBreakingNewsModel Model
+ * Breakingnews Model
  *
  * Models are containers for data. Just about every time information is passed
  * between services, controllers, and templates in Craft, it’s passed via a model.
@@ -24,10 +24,10 @@ use craft\base\Model;
  * https://craftcms.com/docs/plugins/models
  *
  * @author    Pedro Germani
- * @package   CraftBreakingNews
- * @since     1.0.0
+ * @package   Craftbreakingnews
+ * @since     1.0.1
  */
-class CraftBreakingNewsModel extends Model
+class Breakingnews extends Model
 {
     // Public Properties
     // =========================================================================

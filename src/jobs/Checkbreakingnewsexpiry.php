@@ -1,22 +1,22 @@
 <?php
 /**
- * Craft Breaking News plugin for Craft CMS 3.x
+ * craft-breaking-news plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
- * @link      pedrops.com
+ * @link      http://pedrops.com
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
 namespace pedrops\craftbreakingnews\jobs;
 
-use pedrops\craftbreakingnews\CraftBreakingNews;
+use pedrops\craftbreakingnews\Craftbreakingnews;
 
 use Craft;
 use craft\queue\BaseJob;
 
 /**
- * CraftBreakingNewsTask job
+ * Checkbreakingnewsexpiry job
  *
  * Jobs are run in separate process via a Queue of pending jobs. This allows
  * you to spin lengthy processing off into a separate PHP process that does not
@@ -24,10 +24,10 @@ use craft\queue\BaseJob;
  *
  * You can use it like this:
  *
- * use pedrops\craftbreakingnews\jobs\CraftBreakingNewsTask as CraftBreakingNewsTaskJob;
+ * use pedrops\craftbreakingnews\jobs\Checkbreakingnewsexpiry as CheckbreakingnewsexpiryJob;
  *
  * $queue = Craft::$app->getQueue();
- * $jobId = $queue->push(new CraftBreakingNewsTaskJob([
+ * $jobId = $queue->push(new CheckbreakingnewsexpiryJob([
  *     'description' => Craft::t('craft-breaking-news', 'This overrides the default description'),
  *     'someAttribute' => 'someValue',
  * ]));
@@ -42,10 +42,10 @@ use craft\queue\BaseJob;
  * More info: https://github.com/yiisoft/yii2-queue
  *
  * @author    Pedro Germani
- * @package   CraftBreakingNews
- * @since     1.0.0
+ * @package   Craftbreakingnews
+ * @since     1.0.1
  */
-class CraftBreakingNewsTask extends BaseJob
+class Checkbreakingnewsexpiry extends BaseJob
 {
     // Public Properties
     // =========================================================================
@@ -82,6 +82,6 @@ class CraftBreakingNewsTask extends BaseJob
      */
     protected function defaultDescription(): string
     {
-        return Craft::t('craft-breaking-news', 'CraftBreakingNewsTask');
+        return Craft::t('craft-breaking-news', 'Checkbreakingnewsexpiry');
     }
 }

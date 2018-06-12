@@ -1,17 +1,17 @@
 <?php
 /**
- * Craft Breaking News plugin for Craft CMS 3.x
+ * craft-breaking-news plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
- * @link      pedrops.com
+ * @link      http://pedrops.com
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
 namespace pedrops\craftbreakingnews\fields;
 
-use pedrops\craftbreakingnews\CraftBreakingNews;
-use pedrops\craftbreakingnews\assetbundles\field1field\Field1FieldAsset;
+use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\assetbundles\isbreakingnewsfield\IsbreakingnewsFieldAsset;
 
 use Craft;
 use craft\base\ElementInterface;
@@ -21,7 +21,7 @@ use yii\db\Schema;
 use craft\helpers\Json;
 
 /**
- * Field1 Field
+ * Isbreakingnews Field
  *
  * Whenever someone creates a new field in Craft, they must specify what
  * type of field it is. The system comes with a handful of field types baked in,
@@ -30,10 +30,10 @@ use craft\helpers\Json;
  * https://craftcms.com/docs/plugins/field-types
  *
  * @author    Pedro Germani
- * @package   CraftBreakingNews
- * @since     1.0.0
+ * @package   Craftbreakingnews
+ * @since     1.0.1
  */
-class Field1 extends Field
+class Isbreakingnews extends Field
 {
     // Public Properties
     // =========================================================================
@@ -55,7 +55,7 @@ class Field1 extends Field
      */
     public static function displayName(): string
     {
-        return Craft::t('craft-breaking-news', 'Field1');
+        return Craft::t('craft-breaking-news', 'Isbreakingnews');
     }
 
     // Public Methods
@@ -229,7 +229,7 @@ class Field1 extends Field
     {
         // Render the settings template
         return Craft::$app->getView()->renderTemplate(
-            'craft-breaking-news/_components/fields/Field1_settings',
+            'craft-breaking-news/_components/fields/Isbreakingnews_settings',
             [
                 'field' => $this,
             ]
@@ -336,7 +336,7 @@ class Field1 extends Field
     public function getInputHtml($value, ElementInterface $element = null): string
     {
         // Register our asset bundle
-        Craft::$app->getView()->registerAssetBundle(Field1FieldAsset::class);
+        Craft::$app->getView()->registerAssetBundle(IsbreakingnewsFieldAsset::class);
 
         // Get our id and namespace
         $id = Craft::$app->getView()->formatInputId($this->handle);
@@ -350,11 +350,11 @@ class Field1 extends Field
             'prefix' => Craft::$app->getView()->namespaceInputId(''),
             ];
         $jsonVars = Json::encode($jsonVars);
-        Craft::$app->getView()->registerJs("$('#{$namespacedId}-field').CraftBreakingNewsField1(" . $jsonVars . ");");
+        Craft::$app->getView()->registerJs("$('#{$namespacedId}-field').CraftbreakingnewsIsbreakingnews(" . $jsonVars . ");");
 
         // Render the input template
         return Craft::$app->getView()->renderTemplate(
-            'craft-breaking-news/_components/fields/Field1_input',
+            'craft-breaking-news/_components/fields/Isbreakingnews_input',
             [
                 'name' => $this->handle,
                 'value' => $value,

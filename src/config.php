@@ -1,17 +1,17 @@
 <?php
 /**
- * Craft Breaking News plugin for Craft CMS 3.x
+ * craft-breaking-news plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
- * @link      pedrops.com
+ * @link      http://pedrops.com
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
 /**
- * Craft Breaking News config.php
+ * craft-breaking-news config.php
  *
- * This file exists only as a template for the Craft Breaking News settings.
+ * This file exists only as a template for the craft-breaking-news settings.
  * It does nothing on its own.
  *
  * Don't edit this file, instead copy it to 'craft/config' as 'craft-breaking-news.php'

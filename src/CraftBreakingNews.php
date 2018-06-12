@@ -1,27 +1,26 @@
 <?php
 /**
- * Craft Breaking News plugin for Craft CMS 3.x
+ * craft-breaking-news plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
- * @link      pedrops.com
+ * @link      http://pedrops.com
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
 namespace pedrops\craftbreakingnews;
 
-use pedrops\craftbreakingnews\services\CraftBreakingNewsService as CraftBreakingNewsServiceService;
+use pedrops\craftbreakingnews\variables\CraftbreakingnewsVariable;
 use pedrops\craftbreakingnews\models\Settings;
-use pedrops\craftbreakingnews\fields\Field1 as Field1Field;
+use pedrops\craftbreakingnews\fields\Isbreakingnews as IsbreakingnewsField;
 
 use Craft;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
-use craft\web\UrlManager;
 use craft\services\Fields;
+use craft\web\twig\variables\CraftVariable;
 use craft\events\RegisterComponentTypesEvent;
-use craft\events\RegisterUrlRulesEvent;
 
 use yii\base\Event;
 
@@ -36,23 +35,22 @@ use yii\base\Event;
  * https://craftcms.com/docs/plugins/introduction
  *
  * @author    Pedro Germani
- * @package   CraftBreakingNews
- * @since     1.0.0
+ * @package   Craftbreakingnews
+ * @since     1.0.1
  *
- * @property  CraftBreakingNewsServiceService $craftBreakingNewsService
  * @property  Settings $settings
  * @method    Settings getSettings()
  */
-class CraftBreakingNews extends Plugin
+class Craftbreakingnews extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
      * Static property that is an instance of this plugin class so that it can be accessed via
-     * CraftBreakingNews::$plugin
+     * Craftbreakingnews::$plugin
      *
-     * @var CraftBreakingNews
+     * @var Craftbreakingnews
      */
     public static $plugin;
 
@@ -64,14 +62,14 @@ class CraftBreakingNews extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.0.1';
 
     // Public Methods
     // =========================================================================
 
     /**
      * Set our $plugin static property to this class so that it can be accessed via
-     * CraftBreakingNews::$plugin
+     * Craftbreakingnews::$plugin
      *
      * Called after the plugin class is instantiated; do any one-time initialization
      * here such as hooks and events.
@@ -85,30 +83,23 @@ class CraftBreakingNews extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        // Register our site routes
-        Event::on(
-            UrlManager::class,
-            UrlManager::EVENT_REGISTER_SITE_URL_RULES,
-            function (RegisterUrlRulesEvent $event) {
-                $event->rules['siteActionTrigger1'] = 'craft-breaking-news/default';
-            }
-        );
-
-        // Register our CP routes
-        Event::on(
-            UrlManager::class,
-            UrlManager::EVENT_REGISTER_CP_URL_RULES,
-            function (RegisterUrlRulesEvent $event) {
-                $event->rules['cpActionTrigger1'] = 'craft-breaking-news/default/do-something';
-            }
-        );
-
         // Register our fields
         Event::on(
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
             function (RegisterComponentTypesEvent $event) {
-                $event->types[] = Field1Field::class;
+                $event->types[] = IsbreakingnewsField::class;
+            }
+        );
+
+        // Register our variables
+        Event::on(
+            CraftVariable::class,
+            CraftVariable::EVENT_INIT,
+            function (Event $event) {
+                /** @var CraftVariable $variable */
+                $variable = $event->sender;
+                $variable->set('craftbreakingnews', CraftbreakingnewsVariable::class);
             }
         );
 

@@ -1,21 +1,21 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {#
 /**
- * Craft Breaking News plugin for Craft CMS
+ * craft-breaking-news plugin for Craft CMS
  *
- * Field1 Field Settings
+ * Isbreakingnews Field Settings
  *
  * @author    Pedro Germani
  * @copyright Copyright (c) 2018 Pedro Germani
- * @link      pedrops.com
- * @package   CraftBreakingNews
- * @since     1.0.0
+ * @link      http://pedrops.com
+ * @package   Craftbreakingnews
+ * @since     1.0.1
  */
 #}
 
 {% import "_includes/forms" as forms %}
 
-{% do view.registerAssetBundle("pedrops\\craftbreakingnews\\assetbundles\\craftbreakingnews\\CraftBreakingNewsAsset") %}
+{% do view.registerAssetBundle("pedrops\\craftbreakingnews\\assetbundles\\craftbreakingnews\\CraftbreakingnewsAsset") %}
 
 {{ forms.textField({
     label: 'Some Attribute',
