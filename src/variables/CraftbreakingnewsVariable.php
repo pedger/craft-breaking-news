@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,23 +10,23 @@
 
 namespace pedrops\craftbreakingnews\variables;
 
-use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\CraftBreakingNews;
 
 use Craft;
 
 /**
- * craft-breaking-news Variable
+ * Craft Breaking News Variable
  *
  * Craft allows plugins to provide their own template variables, accessible from
- * the {{ craft }} global variable (e.g. {{ craft.craftbreakingnews }}).
+ * the {{ craft }} global variable (e.g. {{ craft.craftBreakingNews }}).
  *
  * https://craftcms.com/docs/plugins/variables
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
-class CraftbreakingnewsVariable
+class CraftBreakingNewsVariable
 {
     // Public Methods
     // =========================================================================
@@ -36,11 +36,11 @@ class CraftbreakingnewsVariable
      * You can have as many variable functions as you want.  From any Twig template,
      * call it like this:
      *
-     *     {{ craft.craftbreakingnews.exampleVariable }}
+     *     {{ craft.craftBreakingNews.exampleVariable }}
      *
      * Or, if your variable requires parameters from Twig:
      *
-     *     {{ craft.craftbreakingnews.exampleVariable(twigValue) }}
+     *     {{ craft.craftBreakingNews.exampleVariable(twigValue) }}
      *
      * @param null $optional
      * @return string

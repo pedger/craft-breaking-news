@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,7 +10,7 @@
 
 namespace pedrops\craftbreakingnews\jobs;
 
-use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\CraftBreakingNews;
 
 use Craft;
 use craft\queue\BaseJob;
@@ -42,8 +42,8 @@ use craft\queue\BaseJob;
  * More info: https://github.com/yiisoft/yii2-queue
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
 class Checkbreakingnewsexpiry extends BaseJob
 {

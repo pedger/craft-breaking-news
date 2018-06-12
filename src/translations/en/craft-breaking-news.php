@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -9,7 +9,7 @@
  */
 
 /**
- * craft-breaking-news en Translation
+ * Craft Breaking News en Translation
  *
  * Returns an array with the string to be translated (as passed to `Craft::t('craft-breaking-news', '...')`) as
  * the key, and the translation as the value.
@@ -17,9 +17,9 @@
  * http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
 return [
-    'craft-breaking-news plugin loaded' => 'craft-breaking-news plugin loaded',
+    'Craft Breaking News plugin loaded' => 'Craft Breaking News plugin loaded',
 ];

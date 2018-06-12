@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,14 +10,14 @@
 
 namespace pedrops\craftbreakingnews\migrations;
 
-use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\CraftBreakingNews;
 
 use Craft;
 use craft\config\DbConfig;
 use craft\db\Migration;
 
 /**
- * craft-breaking-news Install Migration
+ * Craft Breaking News Install Migration
  *
  * If your plugin needs to create any custom database tables when it gets installed,
  * create a migrations/ folder within your plugin folder, and save an Install.php file
@@ -27,8 +27,8 @@ use craft\db\Migration;
  * safeUp() and safeDown() methods.
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
 class Install extends Migration
 {

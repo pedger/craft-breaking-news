@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,7 +10,7 @@
 
 namespace pedrops\craftbreakingnews;
 
-use pedrops\craftbreakingnews\variables\CraftbreakingnewsVariable;
+use pedrops\craftbreakingnews\variables\CraftBreakingNewsVariable;
 use pedrops\craftbreakingnews\models\Settings;
 use pedrops\craftbreakingnews\fields\Isbreakingnews as IsbreakingnewsField;
 
@@ -35,22 +35,22 @@ use yii\base\Event;
  * https://craftcms.com/docs/plugins/introduction
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  *
  * @property  Settings $settings
  * @method    Settings getSettings()
  */
-class Craftbreakingnews extends Plugin
+class CraftBreakingNews extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
      * Static property that is an instance of this plugin class so that it can be accessed via
-     * Craftbreakingnews::$plugin
+     * CraftBreakingNews::$plugin
      *
-     * @var Craftbreakingnews
+     * @var CraftBreakingNews
      */
     public static $plugin;
 
@@ -62,14 +62,14 @@ class Craftbreakingnews extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.1';
+    public $schemaVersion = '1.0.2';
 
     // Public Methods
     // =========================================================================
 
     /**
      * Set our $plugin static property to this class so that it can be accessed via
-     * Craftbreakingnews::$plugin
+     * CraftBreakingNews::$plugin
      *
      * Called after the plugin class is instantiated; do any one-time initialization
      * here such as hooks and events.
@@ -99,7 +99,7 @@ class Craftbreakingnews extends Plugin
             function (Event $event) {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
-                $variable->set('craftbreakingnews', CraftbreakingnewsVariable::class);
+                $variable->set('craftBreakingNews', CraftBreakingNewsVariable::class);
             }
         );
 

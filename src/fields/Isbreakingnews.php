@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,7 +10,7 @@
 
 namespace pedrops\craftbreakingnews\fields;
 
-use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\CraftBreakingNews;
 use pedrops\craftbreakingnews\assetbundles\isbreakingnewsfield\IsbreakingnewsFieldAsset;
 
 use Craft;
@@ -30,8 +30,8 @@ use craft\helpers\Json;
  * https://craftcms.com/docs/plugins/field-types
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
 class Isbreakingnews extends Field
 {
@@ -350,7 +350,7 @@ class Isbreakingnews extends Field
             'prefix' => Craft::$app->getView()->namespaceInputId(''),
             ];
         $jsonVars = Json::encode($jsonVars);
-        Craft::$app->getView()->registerJs("$('#{$namespacedId}-field').CraftbreakingnewsIsbreakingnews(" . $jsonVars . ");");
+        Craft::$app->getView()->registerJs("$('#{$namespacedId}-field').CraftBreakingNewsIsbreakingnews(" . $jsonVars . ");");
 
         // Render the input template
         return Craft::$app->getView()->renderTemplate(

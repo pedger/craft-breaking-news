@@ -1,4 +1,4 @@
-# craft-breaking-news plugin for Craft CMS 3.x
+# Craft Breaking News plugin for Craft CMS 3.x
 
 Displays a Breaking News banner on your website
 
@@ -20,21 +20,21 @@ To install the plugin, follow these instructions.
 
         composer require pedger/craft-breaking-news
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for craft-breaking-news.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Craft Breaking News.
 
-## craft-breaking-news Overview
-
--Insert text here-
-
-## Configuring craft-breaking-news
+## Craft Breaking News Overview
 
 -Insert text here-
 
-## Using craft-breaking-news
+## Configuring Craft Breaking News
 
 -Insert text here-
 
-## craft-breaking-news Roadmap
+## Using Craft Breaking News
+
+-Insert text here-
+
+## Craft Breaking News Roadmap
 
 Some things to do, and ideas for potential features:
 

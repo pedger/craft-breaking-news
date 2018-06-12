@@ -1,18 +1,18 @@
 /**
- * craft-breaking-news plugin for Craft CMS
+ * Craft Breaking News plugin for Craft CMS
  *
  * Isbreakingnews Field JS
  *
  * @author    Pedro Germani
  * @copyright Copyright (c) 2018 Pedro Germani
  * @link      http://pedrops.com
- * @package   Craftbreakingnews
- * @since     1.0.1CraftbreakingnewsIsbreakingnews
+ * @package   CraftBreakingNews
+ * @since     1.0.2CraftBreakingNewsIsbreakingnews
  */
 
  ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "CraftbreakingnewsIsbreakingnews",
+    var pluginName = "CraftBreakingNewsIsbreakingnews",
         defaults = {
         };
 

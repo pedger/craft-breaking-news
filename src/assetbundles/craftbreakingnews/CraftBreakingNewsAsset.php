@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -8,14 +8,14 @@
  * @copyright Copyright (c) 2018 Pedro Germani
  */
 
-namespace pedrops\craftbreakingnews\assetbundles\Craftbreakingnews;
+namespace pedrops\craftbreakingnews\assetbundles\CraftBreakingNews;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
 /**
- * CraftbreakingnewsAsset AssetBundle
+ * CraftBreakingNewsAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -29,10 +29,10 @@ use craft\web\assets\cp\CpAsset;
  * http://www.yiiframework.com/doc-2.0/guide-structure-assets.html
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
-class CraftbreakingnewsAsset extends AssetBundle
+class CraftBreakingNewsAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -53,11 +53,11 @@ class CraftbreakingnewsAsset extends AssetBundle
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
-            'js/Craftbreakingnews.js',
+            'js/CraftBreakingNews.js',
         ];
 
         $this->css = [
-            'css/Craftbreakingnews.css',
+            'css/CraftBreakingNews.css',
         ];
 
         parent::init();

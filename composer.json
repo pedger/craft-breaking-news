@@ -2,13 +2,13 @@
     "name": "pedrops/craft-breaking-news",
     "description": "Displays a Breaking News banner on your website",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
         "craftcms",
         "craft-plugin",
-        "craft-breaking-news"
+        "craft breaking news"
     ],
     "support": {
         "docs": "https://github.com/pedger/craft-breaking-news/blob/master/README.md",
@@ -35,12 +35,13 @@
             "url": "https://asset-packagist.org"
         }
 	],
+
     "extra": {
-        "name": "craft-breaking-news",
+        "name": "Craft Breaking News",
         "handle": "craft-breaking-news",
         "hasCpSettings": true,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/pedger/craft-breaking-news/master/CHANGELOG.md",
-        "class": "pedrops\\craftbreakingnews\\Craftbreakingnews"
+        "class": "pedrops\\craftbreakingnews\\CraftBreakingNews"
     }
 }

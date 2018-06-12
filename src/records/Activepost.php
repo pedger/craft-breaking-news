@@ -1,6 +1,6 @@
 <?php
 /**
- * craft-breaking-news plugin for Craft CMS 3.x
+ * Craft Breaking News plugin for Craft CMS 3.x
  *
  * Displays a Breaking News banner on your website
  *
@@ -10,7 +10,7 @@
 
 namespace pedrops\craftbreakingnews\records;
 
-use pedrops\craftbreakingnews\Craftbreakingnews;
+use pedrops\craftbreakingnews\CraftBreakingNews;
 
 use Craft;
 use craft\db\ActiveRecord;
@@ -28,8 +28,8 @@ use craft\db\ActiveRecord;
  * http://www.yiiframework.com/doc-2.0/guide-db-active-record.html
  *
  * @author    Pedro Germani
- * @package   Craftbreakingnews
- * @since     1.0.1
+ * @package   CraftBreakingNews
+ * @since     1.0.2
  */
 class Activepost extends ActiveRecord
 {
