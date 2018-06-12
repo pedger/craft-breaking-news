@@ -28,7 +28,13 @@
         "psr-4": {
           "pedrops\\craftbreakingnews\\": "src/"
         }
-    },
+	},
+	"repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+	],
     "extra": {
         "name": "Craft Breaking News",
         "handle": "craft-breaking-news",
