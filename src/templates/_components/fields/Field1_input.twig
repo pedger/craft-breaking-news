@@ -1,0 +1,24 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Craft Breaking News plugin for Craft CMS 3.x
+ *
+ * Field1 Field Input
+ *
+ * @author    Pedro Germani
+ * @copyright Copyright (c) 2018 Pedro Germani
+ * @link      pedrops.com
+ * @package   CraftBreakingNews
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+        label: 'Some Field',
+        instructions: 'Enter some text here.',
+        id: name,
+        name: name,
+        value: value})
+}}

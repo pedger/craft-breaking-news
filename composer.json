@@ -1,0 +1,43 @@
+{
+    "name": "pedrops/craft-breaking-news",
+    "description": "Displays a Breaking News banner on your website",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft breaking news"
+    ],
+    "support": {
+        "docs": "https://github.com/pedger/craft-breaking-news/blob/master/README.md",
+        "issues": "https://github.com/pedger/craft-breaking-news/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Germani",
+            "homepage": "pedrops.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "pedrops\\craftbreakingnews\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Breaking News",
+        "handle": "craft-breaking-news",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "https://raw.githubusercontent.com/pedger/craft-breaking-news/master/CHANGELOG.md",
+        "components": {
+            "craftBreakingNewsService": "pedrops\\craftbreakingnews\\services\\CraftBreakingNewsService"
+        },
+        "class": "pedrops\\craftbreakingnews\\CraftBreakingNews"
+    }
+}

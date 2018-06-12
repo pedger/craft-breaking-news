@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Craft Breaking News plugin for Craft CMS 3.x
+ *
+ * Craft Breaking News Settings.twig
+ *
+ * @author    Pedro Germani
+ * @copyright Copyright (c) 2018 Pedro Germani
+ * @link      pedrops.com
+ * @package   CraftBreakingNews
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("pedrops\\craftbreakingnews\\assetbundles\\craftbreakingnews\\CraftBreakingNewsAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}
