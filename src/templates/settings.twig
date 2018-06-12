@@ -14,6 +14,7 @@
 #}
 
 {% import "_includes/forms" as forms %}
+{% from "_includes/forms" import date %}
 
 {% do view.registerAssetBundle("pedrops\\craftbreakingnews\\assetbundles\\craftbreakingnews\\CraftBreakingNewsAsset") %}
 
@@ -23,4 +24,12 @@
     id: 'someAttribute',
     name: 'someAttribute',
     value: settings['someAttribute']})
+}}
+
+{{ forms.date({
+    label: 'Another Field',
+    instructions: 'Enter another setting here.',
+    id: 'anotherAttribute',
+    name: 'anotherAttribute',
+    value: settings['anotherAttribute']})
 }}

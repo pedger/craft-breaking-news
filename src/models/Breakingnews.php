@@ -37,7 +37,7 @@ class Breakingnews extends Model
      *
      * @var string
      */
-    public $someAttribute = 'Some Default';
+    public $someAttribute = 'Some Default Atrribute';
 
     // Public Methods
     // =========================================================================
@@ -56,7 +56,7 @@ class Breakingnews extends Model
     {
         return [
             ['someAttribute', 'string'],
-            ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['someAttribute', 'default', 'value' => 'Some Default breaking news'],
         ];
     }
 }
